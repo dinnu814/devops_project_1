@@ -12,8 +12,12 @@ jobs:
 
       - name: build docker image
         run: |
-             docker build -t nginx-app .
+             docker build -t dinnu814/webapps:nginx-app_v1 .
     
       - name: fetch the list of docker images
         run: |
              docker images -a   
+
+      - name: push the docker image to docker hub
+        run: |
+             docker push dinnu814/webapps:nginx-app_v1
