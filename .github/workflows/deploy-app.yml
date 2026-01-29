@@ -31,6 +31,10 @@ jobs:
     steps:
       - name: check the connectivity
         run: kubectl cluster-info
+        env:
+          KUBECONFIG: C:\Users\santo\.kube\config
 
       - name: list the pods
         run: kubectl get pods -A
+        env:
+          KUBECONFIG: C:\Users\santo\.kube\config
