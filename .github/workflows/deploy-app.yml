@@ -27,7 +27,7 @@ jobs:
              docker push dinnu814/webapps:nginx-app_v1
 
   deploy-application-to-kubernetes:
-    runs-on: GAMNA
+    runs-on: windows
     steps:
       - name: list the pods
         run: kubectl get pods -A
