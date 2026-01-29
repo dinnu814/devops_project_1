@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  deploy:
+  build-container:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
@@ -25,3 +25,11 @@ jobs:
       - name: push the docker image to docker hub
         run: |
              docker push dinnu814/webapps:nginx-app_v1
+
+  deploy-application-to-kubernetes:
+    runs-on: GAMNA
+    steps:
+      - name: list the pods
+        run: kubectl get pods -A
+           
+
