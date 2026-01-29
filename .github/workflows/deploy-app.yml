@@ -29,7 +29,8 @@ jobs:
   deploy-application-to-kubernetes:
     runs-on: windows
     steps:
+      - name: check the connectivity
+        run: kubectl cluster-info
+
       - name: list the pods
         run: kubectl get pods -A
-           
-
