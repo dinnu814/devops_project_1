@@ -18,6 +18,10 @@ jobs:
         run: |
              docker images -a   
 
+      - name: login to docker hub
+        run: docker login {{vars.DOCKER_USERNAME}} {{ secrets.DOCKER_PASSWORD}}
+          
+             
       - name: push the docker image to docker hub
         run: |
              docker push dinnu814/webapps:nginx-app_v1
