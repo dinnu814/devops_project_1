@@ -16,4 +16,4 @@ spec:
       - name: nginx
         image: dinnu814/webapps:nginx-app_v1
         ports:
-        - containerPort: 9090
+        - containerPort: 80
