@@ -13,7 +13,7 @@ spec:
         app: nginx-app
     spec:
       containers:
-      - name: nginx
+      - name: nginx-app
         image: dinnu814/webapps:nginx-app_v1
         ports:
         - containerPort: 9090
