@@ -40,10 +40,16 @@ jobs:
           KUBECONFIG: C:\Users\santo\.kube\config
 
       - name: deploy application via yaml file
-        run: kubectl apply -f deploy.yml
+        run: kubectl apply -f C:\Users\santo\Documents\projects\devops_project_1\deploy.yml
         env:
           KUBECONFIG: C:\Users\santo\.kube\config
 
+      - name: deploy service via yaml file
+        run: kubectl apply -f C:\Users\santo\Documents\projects\devops_project_1\service.yml
+        env:
+          KUBECONFIG: C:\Users\santo\.kube\config
+
+          
       - name: list the pods
         run: kubectl get pods -A
         env:
