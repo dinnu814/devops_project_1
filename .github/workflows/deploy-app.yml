@@ -12,7 +12,7 @@ jobs:
 
       - name: build docker image
         run: |
-             docker build -t dinnu814/webapps:nginx-app_v3 .
+             docker build -t dinnu814/webapps:nginx-app_v4 .
     
       - name: fetch the list of docker images
         run: |
@@ -24,7 +24,7 @@ jobs:
              
       - name: push the docker image to docker hub
         run: |
-             docker push dinnu814/webapps:nginx-app_v3
+             docker push dinnu814/webapps:nginx-app_v4
 
   deploy-application-to-kubernetes:
     runs-on: windows
@@ -44,10 +44,10 @@ jobs:
         env:
           KUBECONFIG: C:\Users\santo\.kube\config
 
-      #- name: deploy service via yaml file
-      #  run: kubectl apply -f C:\Users\santo\Documents\projects\devops_project_1\service.yml
-      #  env:
-      #    KUBECONFIG: C:\Users\santo\.kube\config
+      - name: deploy service via yaml file
+        run: kubectl apply -f C:\Users\santo\Documents\projects\devops_project_1\service.yml
+        env:
+          KUBECONFIG: C:\Users\santo\.kube\config
 
           
       - name: list the pods
