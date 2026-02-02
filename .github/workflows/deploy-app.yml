@@ -12,7 +12,7 @@ jobs:
 
       - name: build docker image
         run: |
-             docker build -t dinnu814/webapps:nginx-app_v4 .
+             docker build -t dinnu814/webapps:nginx-app_v5 .
     
       - name: fetch the list of docker images
         run: |
@@ -24,7 +24,7 @@ jobs:
              
       - name: push the docker image to docker hub
         run: |
-             docker push dinnu814/webapps:nginx-app_v4
+             docker push dinnu814/webapps:nginx-app_v5
 
   deploy-application-to-kubernetes:
     runs-on: windows

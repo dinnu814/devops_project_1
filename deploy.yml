@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: dinnu814/webapps:nginx-app_v4
+        image: dinnu814/webapps:nginx-app_v5
         ports:
         - containerPort: 80          
